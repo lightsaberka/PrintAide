@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage 
+	x:TypeArguments="thingEdit:ThingEditViewModel" 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+	xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+	xmlns:thingEdit="clr-namespace:Filaaide.Core.ViewModels.Things;assembly=Filaaide.Core"
+	x:Class="Filaaide.UI.Pages.Things.ThingEditPage"
+	Title="Add thing"
+	IconImageSource="plus">
+
+	<ContentPage.Content>
+        <StackLayout>
+            <Label Text="Thing edit"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</views:MvxContentPage>

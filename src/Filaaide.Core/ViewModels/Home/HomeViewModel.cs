@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Filaaide.Core.ViewModels._Base;
-
 namespace Filaaide.Core.ViewModels.Home
 {
+    /// <summary>
+    /// Space for possible user authentication.
+    /// </summary>
     public class HomeViewModel : BaseViewModel
     {
     }

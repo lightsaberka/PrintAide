@@ -7,13 +7,13 @@
     xmlns:local="clr-namespace:Filaaide.UI.Pages"
     x:Class="Filaaide.UI.Pages.HomePage"
     xmlns:viewModels="clr-namespace:Filaaide.Core.ViewModels.Home;assembly=Filaaide.Core"
-    Title="Main page">
+    Title="Home">
 
 	<ContentPage.Content>
 
 		<StackLayout>
 
-			<Label Text="Welcome!!&#10;App scaffolded with MvxScaffolding"
+			<Label Text="Empty home"
 			       VerticalOptions="CenterAndExpand" 
 			       HorizontalOptions="CenterAndExpand" />
 
