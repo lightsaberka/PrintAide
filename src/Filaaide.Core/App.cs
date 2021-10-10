@@ -1,6 +1,7 @@
-﻿using MvvmCross.IoC;
+﻿using Filaaide.Core.ViewModels.Tabs;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
-using Filaaide.Core.ViewModels.Home;
+using Xamarin.Forms;
 
 namespace Filaaide.Core
 {
@@ -13,7 +14,9 @@ namespace Filaaide.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-	        this.RegisterAppStart<HomeViewModel>();
+	        this.RegisterAppStart<TabsRootViewModel>();
+
+	        Device.SetFlags(new string[] { "CarouselView_Experimental" });
         }
     }
 }

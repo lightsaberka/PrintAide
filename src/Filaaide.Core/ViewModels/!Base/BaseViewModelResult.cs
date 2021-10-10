@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using MvvmCross.ViewModels;
 
-namespace Filaaide.Core.ViewModels._Base
+namespace Filaaide.Core.ViewModels
 {
     public abstract class BaseViewModelResult<TResult> : BaseViewModel, IMvxViewModelResult<TResult>
         where TResult : notnull
