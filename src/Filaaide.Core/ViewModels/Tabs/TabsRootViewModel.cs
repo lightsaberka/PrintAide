@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Filaaide.Core.ViewModels.Calculator;
 using Filaaide.Core.ViewModels.Filaments;
 using Filaaide.Core.ViewModels.Things;
 using MvvmCross.Commands;
@@ -16,7 +17,7 @@ namespace Filaaide.Core.ViewModels.Tabs
 		private readonly IMvxNavigationService _navigationService;
 
 		/// <summary>
-		/// List of tabs.
+		/// List of tabs. 
 		/// </summary>
 		public List<Type> AllTabs { get; }
 
@@ -29,7 +30,9 @@ namespace Filaaide.Core.ViewModels.Tabs
 			this.AllTabs = new List<Type>
 			{
 				typeof(FilamentListViewModel),
-				typeof(ThingEditViewModel)
+				typeof(ThingEditViewModel),
+				typeof(CalculatorViewModel),
+				typeof(ThingListViewModel)
 			};
 
 			this.ShowTabsCommand = new MvxAsyncCommand(this.InitializeTabs);
