@@ -11,11 +11,25 @@
 	IconImageSource="ic_toys">
 
 	<ContentPage.Content>
-		<StackLayout>
-			<Label Text="Thing list"
-			       VerticalOptions="CenterAndExpand" 
-			       HorizontalOptions="CenterAndExpand" />
-		</StackLayout>
+
+		<ScrollView>
+
+			<CollectionView ItemsSource="{Binding Things}">
+
+				<CollectionView.ItemsLayout>
+					<LinearItemsLayout ItemSpacing="8" Orientation="Vertical" />
+				</CollectionView.ItemsLayout>
+
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Label Text="{Binding CurrentThing.Name}" />
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+
+			</CollectionView>
+
+		</ScrollView>
+
 	</ContentPage.Content>
 
 </views:MvxContentPage>

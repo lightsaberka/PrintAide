@@ -2,40 +2,35 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Filaaide.Core.Model;
+using Filaaide.Core.Services.Repository;
 
 namespace Filaaide.Core.Services.DataService.Things
 {
 	public class ThingDataService: IThingDataService
 	{
-		public Task<List<Thing>> GetAllThings()
+		public async Task<List<Thing>> GetAllThings()
 		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.GetAllThings();
 		}
 
 		public async Task<List<Thing>> GetThingsByFilamentId(int id)
 		{
-			var allThings = await this.GetAllThings();
-			return allThings.Where(t => t.FilamentId == id).ToList();
+			return (await this.GetAllThings()).Where(t => t.FilamentId == id).ToList();
 		}
 
-		public Task<Thing> GetFilamentById(int id)
+		public async Task<Thing> GetThingById(int id)
 		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.GetThingById(id);
 		}
 
-		public Task<Thing> AddNewThing(Thing thing)
+		public async Task<int> SaveThing(Thing thing)
 		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.SaveThing(thing);
 		}
 
-		public Task<Thing> UpdateThing(Thing thing)
+		public async Task<int> DeleteThing(Thing thing)
 		{
-			throw new System.NotImplementedException();
-		}
-
-		public Task<Thing> DeleteThing(Thing thing)
-		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.DeleteThing(thing);
 		}
 	}
 }
