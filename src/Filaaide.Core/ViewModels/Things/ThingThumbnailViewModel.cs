@@ -3,7 +3,7 @@ using MvvmCross.Navigation;
 
 namespace Filaaide.Core.ViewModels.Things
 {
-	public class ThingThumbnailViewModel: BaseViewModel
+	public class ThingThumbnailViewModel : BaseViewModel
 	{
 		private readonly IMvxNavigationService _navigationService;
 

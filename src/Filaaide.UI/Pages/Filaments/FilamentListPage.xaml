@@ -12,7 +12,7 @@
 
 	<ContentPage.Content>
 
-		<ScrollView>
+		<ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
 			<CollectionView ItemsSource="{Binding Filaments}">
 

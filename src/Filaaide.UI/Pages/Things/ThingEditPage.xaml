@@ -11,11 +11,21 @@
 	IconImageSource="ic_add">
 
 	<ContentPage.Content>
-        <StackLayout>
-            <Label Text="Thing edit"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+		<ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+			<StackLayout Orientation="Vertical" Spacing="16">
+
+				<Entry Placeholder="Name" Text="{Binding CurrentThing.Name}"  ClearButtonVisibility="WhileEditing" Keyboard="Text" ReturnType="Next"/>
+
+				<Entry Placeholder="Weight in grams" Text="{Binding CurrentThing.Weight}" ClearButtonVisibility="WhileEditing" Keyboard="Numeric" ReturnType="Next"/>
+
+				<Button Text="Save" Command="{Binding SaveCommand}"/>
+
+			</StackLayout>
+
+		</ScrollView>
+
+	</ContentPage.Content>
 
 </views:MvxContentPage>

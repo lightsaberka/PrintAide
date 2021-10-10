@@ -1,13 +1,12 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Filaaide.Core.Model;
 using Filaaide.Core.Services.DataService.Filaments;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
 namespace Filaaide.Core.ViewModels.Filaments
 {
-	public class FilamentListViewModel: BaseViewModel
+	public class FilamentListViewModel : BaseViewModel
 	{
 		private readonly IMvxNavigationService _navigationService;
 		private readonly IFilamentDataService _filamentDataService;
