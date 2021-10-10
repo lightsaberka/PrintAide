@@ -115,7 +115,9 @@
     <AndroidResource Include="Resources\drawable\ic_launcher_foreground.xml" />
     <AndroidResource Include="Resources\values-v19\styles.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_add.xml" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Filaaide.Core\Filaaide.Core.csproj">
       <Project>{99D3CF07-12DE-41BE-9EBB-03D7657A7B4A}</Project>
@@ -125,6 +127,15 @@
       <Project>{1030B9E3-23B7-4382-8804-BD350E300F0F}</Project>
       <Name>Filaaide.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_calculate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_support.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_toys.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

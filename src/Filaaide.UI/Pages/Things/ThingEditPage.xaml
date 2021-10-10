@@ -8,7 +8,7 @@
 	xmlns:thingEdit="clr-namespace:Filaaide.Core.ViewModels.Things;assembly=Filaaide.Core"
 	x:Class="Filaaide.UI.Pages.Things.ThingEditPage"
 	Title="Add thing"
-	IconImageSource="plus">
+	IconImageSource="ic_add">
 
 	<ContentPage.Content>
         <StackLayout>
