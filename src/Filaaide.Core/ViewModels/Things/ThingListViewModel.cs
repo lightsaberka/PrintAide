@@ -6,7 +6,7 @@ using MvvmCross.ViewModels;
 
 namespace Filaaide.Core.ViewModels.Things
 {
-	public class ThingListViewModel: BaseViewModel
+	public class ThingListViewModel : BaseViewModel
 	{
 		private readonly IMvxNavigationService _navigationService;
 		private readonly IThingDataService _thingDataService;

@@ -3,7 +3,7 @@ using MvvmCross.Navigation;
 
 namespace Filaaide.Core.ViewModels.Filaments
 {
-	public class FilamentThumbnailViewModel: BaseViewModel
+	public class FilamentThumbnailViewModel : BaseViewModel
 	{
 		private readonly IMvxNavigationService _navigationService;
 

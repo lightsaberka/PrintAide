@@ -10,5 +10,7 @@ namespace Filaaide.Core.Model
 		public string Name { get; set; }
 
 		public int FilamentId { get; set; }
+
+		public float Weight { get; set; }
 	}
 }
