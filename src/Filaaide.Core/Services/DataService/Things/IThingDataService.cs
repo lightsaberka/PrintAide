@@ -7,44 +7,37 @@ namespace Filaaide.Core.Services.DataService.Things
 	public interface IThingDataService
 	{
 		/// <summary>
-		/// Returns all things.
+		/// Return all things.
 		/// </summary>
 		/// <returns></returns>
 		Task<List<Thing>> GetAllThings();
 
 		/// <summary>
-		/// Returns all things made by filament with given id.
+		/// Return all things made by filament with given id.
 		/// </summary>
 		/// /// <param name="id">Filamnet id</param>
 		/// <returns></returns>
 		Task<List<Thing>> GetThingsByFilamentId(int id);
 
 		/// <summary>
-		/// Returns thing with given id.
+		/// Return thing with given id.
 		/// </summary>
 		/// <param name="id">Thing id</param>
 		/// <returns></returns>
-		Task<Thing> GetFilamentById(int id);
+		Task<Thing> GetThingById(int id);
 
 		/// <summary>
-		/// Adds new thing.
+		/// Add or update given thing.
 		/// </summary>
-		/// <param name="thing">Thing to add</param>
-		/// <returns></returns>
-		Task<Thing> AddNewThing(Thing thing);
-
-		/// <summary>
-		/// Update given thing.
-		/// </summary>
-		/// <param name="thing">Thing to update</param>
-		/// <returns></returns>
-		Task<Thing> UpdateThing(Thing thing);
+		/// <param name="thing">Thing to add or update</param>
+		/// <returns>Thing id</returns>
+		Task<int> SaveThing(Thing thing);
 
 		/// <summary>
 		/// Delete given thing.
 		/// </summary>
 		/// <param name="thing">Thing to delete</param>
-		/// <returns></returns>
-		Task<Thing> DeleteThing(Thing thing);
+		/// <returns>Thing id</returns>
+		Task<int> DeleteThing(Thing thing);
 	}
 }

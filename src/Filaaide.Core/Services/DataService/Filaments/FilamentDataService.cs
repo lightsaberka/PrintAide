@@ -1,34 +1,30 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Filaaide.Core.Model;
+using Filaaide.Core.Services.Repository;
 
 namespace Filaaide.Core.Services.DataService.Filaments
 {
 	public class FilamentDataService: IFilamentDataService
 	{
-		public Task<List<Filament>> GetAllFilaments()
+		public async Task<List<Filament>> GetAllFilaments()
 		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.GetAllFilaments();
 		}
 
-		public Task<Filament> GetFilamentById(int id)
+		public async Task<Filament> GetFilamentById(int id)
 		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.GetFilamentById(id);
 		}
 
-		public Task<Filament> AddNewFilament(Filament filament)
+		public async Task<int> SaveFilament(Filament filament)
 		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.SaveFilament(filament);
 		}
 
-		public Task<Filament> UpdateFilament(Filament filament)
+		public async Task<int> DeleteFilament(Filament filament)
 		{
-			throw new System.NotImplementedException();
-		}
-
-		public Task<Filament> DeleteFilament(Filament filament)
-		{
-			throw new System.NotImplementedException();
+			return await FilaaideDatabase.Database.DeleteFilament(filament);
 		}
 	}
 }

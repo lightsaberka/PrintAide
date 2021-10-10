@@ -5,6 +5,6 @@
                      xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                      xmlns:tabs="clr-namespace:Filaaide.Core.ViewModels.Tabs;assembly=Filaaide.Core"
                      x:Class="Filaaide.UI.Pages.TabsRootPage" 
-                     Title="Filaaide">
+                     Title="Filament companion">
 
 </views:MvxTabbedPage>

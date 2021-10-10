@@ -1,14 +1,18 @@
 ﻿using Filaaide.Core.Model;
+using MvvmCross.Navigation;
 
 namespace Filaaide.Core.ViewModels.Things
 {
-	public class ThingThumbnailViewModel: BaseViewModel<Thing>
+	public class ThingThumbnailViewModel: BaseViewModel
 	{
+		private readonly IMvxNavigationService _navigationService;
+
 		public Thing CurrentThing { get; set; }
 
-		public override void Prepare(Thing parameter)
+		public ThingThumbnailViewModel(Thing thing, IMvxNavigationService navigationService)
 		{
-			this.CurrentThing = parameter;
+			this.CurrentThing = thing;
+			this._navigationService = navigationService;
 		}
 	}
 }

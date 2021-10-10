@@ -11,11 +11,25 @@
 	IconImageSource="ic_support">
 
 	<ContentPage.Content>
-		<StackLayout>
-			<Label Text="Filament list"
-			       VerticalOptions="CenterAndExpand" 
-			       HorizontalOptions="CenterAndExpand" />
-		</StackLayout>
+
+		<ScrollView>
+
+			<CollectionView ItemsSource="{Binding Filaments}">
+
+				<CollectionView.ItemsLayout>
+					<LinearItemsLayout ItemSpacing="8" Orientation="Vertical" />
+				</CollectionView.ItemsLayout>
+
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Label Text="{Binding CurrentFilament}" />
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+
+			</CollectionView>
+
+		</ScrollView>
+
 	</ContentPage.Content>
 
 </views:MvxContentPage>
